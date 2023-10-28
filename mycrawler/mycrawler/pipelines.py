@@ -17,6 +17,6 @@ class SaveLinksAsyncPipeline:
         return item
 
     def close_spider(self, spider):
-        with open('found_links.txt', 'w') as f:
+        with open('output.txt', 'w') as f:
             for link in self.links:
                 f.write(link + '\n')
